@@ -1,11 +1,13 @@
-type Products = {
+type Product = {
   name: string;
   price: number;
 };
 
-const calculateCartTotal = (products: Products[]): number => {
-  // module video te 8 no. line e const total er por number keno dise? ami to already return number disi. ekhon ki 8 no. line number deya ta mendatory?
-  const total: number = products.reduce((sum, item) => sum + item.price, 0);
+const calculateCartTotal = (products: Product[]): number => {
+  const total: number = products.reduce(
+    (sum: number, item: Product) => sum + item.price,
+    0,
+  );
   return total;
 };
 
