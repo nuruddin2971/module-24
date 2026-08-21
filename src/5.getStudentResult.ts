@@ -10,10 +10,10 @@ interface Result {
 }
 
 const getStudentResult = (student: Student): Result => {
-  const marks: number[] = student.marks;
-  const totalMarks: number = marks.reduce((sum, mark) => sum + mark, 0);
-  const average: number = totalMarks / marks.length;
-  const result: string = average >= 40 ? "Passed" : "Faild";
+  const marks = student.marks;
+  const totalMarks = marks.reduce((sum, mark) => sum + mark, 0);
+  const average = totalMarks / marks.length;
+  const result = average >= 40 ? "Passed" : "Failed";
   return {
     name: student.name,
     average,
